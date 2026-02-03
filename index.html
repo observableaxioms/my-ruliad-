@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Hobbies</title>
+    <title>My Ruliad</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
@@ -50,7 +50,7 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 700px;
             margin: 0 auto;
             padding: 4rem 2rem;
         }
@@ -59,7 +59,6 @@
             margin-bottom: 3rem;
             border-bottom: 2px solid #ffffff;
             padding-bottom: 2rem;
-            text-align: center;
         }
 
         h1 {
@@ -70,46 +69,103 @@
             color: #ffffff;
         }
 
-        .hobbies-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
+        .date {
+            font-family: 'Courier Prime', monospace;
+            font-size: 0.9rem;
+            color: #e0d4f7;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
-        .hobby-card {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 2rem;
-            text-align: center;
-            transition: transform 0.3s ease, background 0.3s ease;
-            border: 2px solid rgba(255, 255, 255, 0.2);
+        .content {
+            margin-bottom: 4rem;
         }
 
-        .hobby-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.15);
-        }
-
-        .hobby-card img {
-            width: 100%;
-            max-width: 300px;
-            height: auto;
-            border-radius: 10px;
+        .content p {
             margin-bottom: 1.5rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
-        .hobby-card h2 {
+        .quote {
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            padding-left: 1.5rem;
+            border-left: 4px solid #ffffff;
+            color: #e0d4f7;
+        }
+
+        .content h2 {
             font-size: 1.8rem;
-            margin-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
             color: #ffffff;
         }
 
-        .hobby-card p {
-            font-size: 1rem;
+        .content h3 {
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .content strong {
+            font-weight: 700;
+        }
+
+        .content em {
+            font-style: italic;
+        }
+
+        .resources {
+            border-top: 2px solid #ffffff;
+            padding-top: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .resources h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .resources ul {
+            list-style: none;
+        }
+
+        .resources li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .resources li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
             color: #e0d4f7;
-            line-height: 1.6;
+        }
+
+        .resources a {
+            color: #ffffff;
+            text-decoration: none;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+            transition: border-color 0.2s ease;
+        }
+
+        .resources a:hover {
+            border-bottom-color: #ffffff;
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.4);
+            text-align: center;
+            font-size: 0.9rem;
+            color: #e0d4f7;
         }
 
         @media (max-width: 768px) {
@@ -118,16 +174,19 @@
             }
 
             .container {
-                padding: 2rem 1rem;
+                padding: 2rem 1.5rem;
             }
 
             h1 {
                 font-size: 2rem;
             }
 
-            .hobbies-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
+            .content h2 {
+                font-size: 1.5rem;
+            }
+
+            .quote {
+                font-size: 1rem;
             }
 
             nav {
@@ -139,35 +198,77 @@
 </head>
 <body>
     <nav>
-        <a href="index.html">My Ruliad</a>
-        <a href="hobbies.html" class="active">My Hobbies</a>
+        <a href="index.html" class="active">My Ruliad</a>
+        <a href="hobbies.html">My Hobbies</a>
     </nav>
 
     <div class="container">
         <header>
-            <h1>My Hobbies</h1>
+            <h1>My Ruliad</h1>
         </header>
 
-        <div class="hobbies-grid">
-            <div class="hobby-card">
-                <img src="mp.png" alt="Swimming">
-                <h2>Swimming</h2>
-                <p>I love swimming</p>
-            </div>
+        <div class="content">
+            <p>
+                Mike Ross from Suits said something that stuck with me:
+            </p>
 
-            <div class="hobby-card">
-                <img src="sc.png" alt="Ballet">
-                <h2>Ballet</h2>
-                <p>I love ballet</p>
-            </div>
+            <p>
+                "I like to read, once I read something, I understand it, and once I understand it, I never forget it."
+            </p>
+            
+            <p>
+                As a kid who was left on my own ample time, I taught myself everything from reading.
+            </p>
 
-            <div class="hobby-card">
-                <img src="mw.png" alt="Golf">
-                <h2>Golf</h2>
-                <p>I love golf</p>
-            </div>
+            <p>
+                I voraciously read encyclopedias at age 10 & thought a lot about quantum principles, stumbling upon the idea of the Ruliad & Hyperuliad.
+            </p>
+            
+            <p>
+                I thought our ideas of god could have derived from aliens with alien intelligence who came to earth at a prehistoric time, and could access dimensions we cannot see from our fishbowl.
+            </p>
+            
+            <p>
+                Later, I came to meet someone who was exactly like me. Although he was born on the other side of the world, he had a genuine love for science and experimentation out of pure curiosity like I did.
+            </p>
+            
+            <p>
+                I feel like, finally for the first time in my life, my emes have arranged themselves in a way that quiets my brain, like when I am swimming or reading.
+            </p>
+            
+            <p>
+                My whole life - the reason why I was into black holes, Einstein, math, it all makes sense. What I thought was sci-fi was actually just the concept of the Ruliad & Hyperuliad!
+            </p>
+            
+            <p>
+                Physics & math only seem different to us because as observers within the ruliad, we cannot sample outside our rulial space.
+            </p>
+            
+            <p>
+                As an endlessly curious person, metamathematics makes me see the world in the way I felt like I always have seen it, like how natural it felt when I did freestyle strokes back and forth after school to deal with my nerves from college applications.
+            </p>
+        </div>
+
+        <div class="resources">
+            <h2>A Dedication to My Love for Wolfram Science</h2>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=Ed1gsyxxwM0">Mandelbrot's Evil Twin</a></li>
+                <li><a href="https://www.youtube.com/watch?v=0HqUYpGQIfs">Emergent Complexity</a> - Astrobiology, evolution, computational rules underlying universe</li>
+                <li><a href="https://www.youtube.com/watch?v=RQWpF2Gb-gU">Pi</a></li>
+                <li><a href="https://www.youtube.com/watch?v=r6sGWTCMz2k">Fourier Series</a></li>
+                <li><a href="https://www.youtube.com/watch?v=d-o3eB9sfls">I love pi too much to only include it once</a></li>
+            </ul>
+        </div>
+
+        <div class="resources">
+            <h2>After I Travel Endlessly Along the Curves of Metamathematics, I Love</h2>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=wr13tU8Nqsc">Ballet</a></li>
+                <li><a href="https://www.youtube.com/watch?v=4xUIyPrJIr0">Swimming</a></li>
+                <li><a href="https://www.youtube.com/watch?v=CpkZfkxdj2c">Country</a></li>
+                <li><a href="https://www.youtube.com/watch?v=jvPPXbo87ds">Splines</a></li>
+            </ul>
         </div>
     </div>
 </body>
 </html>
-
